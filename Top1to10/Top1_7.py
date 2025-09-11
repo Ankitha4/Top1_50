@@ -76,12 +76,32 @@ flip_sentence = " ".join(s_list)
 print(flip_sentence)
 
 
+#7.Are two string Anagrams:
+s1= "ABCDM"
+s2= "CDBMA"
 
+#solution1
+len_s1=len(s1)
+len_s2=len(s2)
+s_s1= sorted(s1.lower())
+s_s2= sorted(s2.lower())
+if len_s1==len_s2 and s_s1 == s_s2:
+    print("Is a anagram")
+else:
+    print("Not a anagram")
 
-
-
-
-
-
+#solution2
+def character_count(s):
+    char_count = {}
+    for char in s:
+        if char in char_count:
+            char_count[char] +=1
+        else:
+            char_count[char]=1
+    return char_count
+if character_count(s1)==character_count(s2):
+    print("Anagram")
+else:
+    print("Not a Anagram")
 
 
