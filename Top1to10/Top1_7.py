@@ -103,5 +103,3 @@ if character_count(s1)==character_count(s2):
     print("Anagram")
 else:
     print("Not a Anagram")
-
-
