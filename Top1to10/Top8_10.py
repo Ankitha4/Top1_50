@@ -1,4 +1,5 @@
 #8.longest substrings without repeats
+'''
 def longest_unique_substring(s):
     seen = {}          # Store last seen index of each character
     start = 0          # Start index of current substring window
@@ -47,4 +48,15 @@ def longest_substring_without_repeat(s):
 
 # Test the function
 longest_substring_without_repeat("abcdaed")
+'''
 #9.get all the substrings in the string and get print the palindrome
+s= "Programming"
+sub_s=[]
+count = 0
+for i in range(0,len(s)):
+    for j in range(i+1,len(s)+1):
+        sub_s.append(s[i:j])
+        count +=1
+        print(f"substring \"{s[i:j]}\" with {count}")
+print(sub_s)
+print(f"The total substring count is {count}")
