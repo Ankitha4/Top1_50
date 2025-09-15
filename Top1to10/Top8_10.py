@@ -22,9 +22,7 @@ def longest_unique_substring(s):
 
     return max_substr
 print(longest_unique_substring("abcdeabfghu"))
-
 #or
-
 def longest_substring_without_repeat(s):
     char_set = set()
     l = 0
@@ -45,9 +43,10 @@ def longest_substring_without_repeat(s):
     longest_substr = s[start_idx:start_idx + max_len]
     print("Longest substring without repeats:", longest_substr)
     print("Length:", max_len)
-
 # Test the function
 longest_substring_without_repeat("abcdaed")
+
+
 
 #9.get all the substrings in the string and get print the palindrome
 s= "Programming"
@@ -60,6 +59,8 @@ for i in range(0,len(s)):
         print(f"substring \"{s[i:j]}\" with {count}")
 print(sub_s)
 print(f"The total substring count is {count}")
+
+
 
 #10.Implement your own atoi
 def my_atoi(s: str) -> int:
@@ -110,6 +111,7 @@ def myAtoi(s:str)->int:
         else:
             parsed = parsed *10 + int(cur)
         i=i+1
-    return  parsed* sign
+    return  parsed*sign
+
 
 print(myAtoi("-12343vbg78"))
