@@ -20,8 +20,8 @@ print(ecd("Aaabbccddeeeddfffffff"))
 
 #12.Most frequent character in a string
 def mostfreq(s,n):
-    char_count= {}
-    new_string=""
+    char_count = {}
+    new_string = ""
     for char in s:
         if char in char_count:
             char_count[char] += 1
@@ -45,8 +45,28 @@ def mostfreq(s,n):
 
     new_string = ''.join(c for c in s if c != n_char)
     return new_string, n_char
-
 print(mostfreq("aaaaaabebbbbbcccccddddeeeeeeeeeeeeeee",1))
 
 
+
+#13.is one string rotation of another
+def find_rotation(s1,s2):
+    s = s1+s2
+    if s2 in s:
+        return print(f"{s2} is a rotation of {s1}")
+    return print(f"{s2} is not a rotation of {s1}")
+
+find_rotation("ABC","BAC")
+
+#14.Strip all white space:
+def strip_whitespaces(s):
+    n = len(s)
+    without_space = ""
+    i = 1
+    while i < n:
+        if s[i] != ' ':
+            without_space += s[i]
+        i += 1
+    print(f"without whitespace {without_space}")
+strip_whitespaces("   sbh hj   ")
 

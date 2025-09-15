@@ -85,7 +85,7 @@ def my_atoi(s: str) -> int:
         i += 1
 
     return sign * result
-print(my_atoi("-1256vbY4"))
+print(my_atoi("  -125 6vbY4"))
 
 
 #OR
