@@ -8,6 +8,21 @@ def str_shuffle(s:str,indices:list[int])->str:
 
 print(str_shuffle("codeleet",[4,5,6,7,0,2,1,3]))
 
-#16.covert the text to asii
+#16.covert the text to title case properly
+def title_case(s:str)-> str:
+    word_list = s.split()
+    title_string = []
+    for word in word_list:
+        if word:
+            title_string.append(word[0].upper()+word[1:].lower())
+        else:
+            title_string.append(" ")
+    return " ".join(title_string)
+
+print(title_case("How is the $cod4e"))
+
+
+
+
 
 
