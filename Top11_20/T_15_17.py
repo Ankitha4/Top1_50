@@ -21,8 +21,34 @@ def title_case(s:str)-> str:
 
 print(title_case("How is the $cod4e"))
 
+def title_case_without_builtin(s:str):
+    words_list= s.split()
+    title_string= []
 
+    def upper_case(s):
+        upper = ""
+        for char in s:
+            if 'a'<= char <='z':
+                upper += chr(ord(char)-32)
+            else:
+                upper += char
+        return upper
 
+    def lower_case(s):
+        lower = ""
+        for char in s:
+            if 'A'<=char<='Z':
+                lower += chr(ord(char)+32)
+            else:
+                lower += char
+        return lower
 
+    for word in words_list:
+        if word:
+            title_string.append(upper_case(word[0])+lower_case(word[1:]))
+        else:
+            title_string.append(" ")
+    return " ".join(title_string)
 
+print(title_case_without_builtin("How is the $cod4e"))
 
