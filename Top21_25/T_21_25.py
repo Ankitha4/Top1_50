@@ -92,6 +92,13 @@ def short_words(s):
 short_words("I am at a bar")
 
 #25.Longest palindromic substring:
-
-
-
+s4="Malayalam"
+substring = []
+for i in range(len(s4)):
+    for j in range(i+1,len(s4)+1):
+        substring.append(s4[i:j])
+palindrome_substring= [sub for sub in substring if sub == sub[::-1]]
+len_long_pal = max(len(sub) for sub in palindrome_substring)
+longest_pal_substring = ([string for string in palindrome_substring if len(string)==len_long_pal])
+print(palindrome_substring)
+print(longest_pal_substring)
