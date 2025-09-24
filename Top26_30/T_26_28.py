@@ -13,3 +13,17 @@ def reverse_array(a:list):
 
 
 reverse_array(["A", "N", "K", "I", "T", "H", "A"])
+
+#27.Find the largest and smallest element in array
+num_arr = [25,78,89,90,20,-3,0]
+def lar_small(num_arr:list):
+    largest = smallest = num_arr[0]
+    for num in num_arr:
+        if smallest >num:
+            smallest= num
+        elif largest < num:
+            largest = num
+    print(f"largest : {largest} , smallest : {smallest}")
+
+
+lar_small(num_arr)
