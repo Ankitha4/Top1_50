@@ -36,7 +36,12 @@ lar_small(num_arr)
 #28.Check for duplicates in array
 ary = [200, "d", "900", "d", 90, 200, 8, 77]
 non_dup = []
+dup = False
 for i in ary:
-    if i not in non_dup:
+    if i in non_dup:
+        dup = True
+        print("Duplicate found : ",i)
+    else:
         non_dup.append(i)
 print(non_dup)
+
